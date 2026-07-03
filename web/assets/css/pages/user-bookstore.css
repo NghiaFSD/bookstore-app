@@ -1,0 +1,257 @@
+/* BookStoreApp - User pages shared visuals */
+:root {
+    --bookstore-ink: #132238;
+    --bookstore-muted: #64748b;
+    --bookstore-primary: #e76f51;
+    --bookstore-primary-2: #ff8a5b;
+    --bookstore-surface: rgba(255, 255, 255, 0.88);
+    --bookstore-radius: 20px;
+    --bookstore-shadow: 0 18px 40px rgba(15, 23, 42, 0.10);
+}
+
+body.bookstore-user-page {
+    min-height: 100vh;
+    font-family: 'Segoe UI', sans-serif;
+    color: var(--bookstore-ink);
+    background:
+        radial-gradient(circle at top left, rgba(231, 111, 81, 0.12), transparent 32%),
+        radial-gradient(circle at top right, rgba(38, 70, 83, 0.10), transparent 28%),
+        linear-gradient(180deg, #f8fafc 0%, #eef2f7 100%);
+    background-attachment: fixed;
+}
+
+.bookstore-page-shell,
+.bookstore-history-shell {
+    max-width: 1320px;
+}
+
+.bookstore-navbar {
+    backdrop-filter: blur(12px);
+    box-shadow: 0 10px 24px rgba(15, 23, 42, 0.12);
+}
+
+.bookstore-card,
+.bookstore-hero,
+.bookstore-toolbar,
+.bookstore-sidebar,
+.bookstore-mobile-search,
+.bookstore-empty-state,
+.bookstore-history-card,
+.bookstore-result-card {
+    border: 1px solid rgba(148, 163, 184, 0.16);
+    box-shadow: var(--bookstore-shadow);
+}
+
+.bookstore-sidebar {
+    background: var(--bookstore-surface);
+    padding: 18px;
+    border-radius: var(--bookstore-radius);
+    position: sticky;
+    top: 88px;
+    backdrop-filter: blur(10px);
+}
+
+.bookstore-sidebar h5 {
+    font-size: 12px;
+    font-weight: 800;
+    color: var(--bookstore-ink);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    border-bottom: 2px solid var(--bookstore-primary);
+    display: inline-block;
+    margin-bottom: 16px;
+}
+
+.bookstore-mobile-search {
+    background: rgba(255, 255, 255, 0.92);
+    border-radius: 18px;
+    padding: 12px;
+    margin-top: 14px;
+}
+
+.bookstore-category-list {
+    display: grid;
+    gap: 8px;
+}
+
+.bookstore-category-link {
+    color: #475569;
+    text-decoration: none;
+    display: block;
+    padding: 10px 12px;
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.80);
+    transition: 0.25s ease;
+}
+
+.bookstore-category-link:hover {
+    color: var(--bookstore-primary);
+    transform: translateX(4px);
+    background: rgba(231, 111, 81, 0.08);
+}
+
+.bookstore-hero {
+    background: linear-gradient(135deg, #264653 0%, #1f2937 100%);
+    color: #fff;
+    border-radius: 24px;
+    padding: 18px 20px;
+    backdrop-filter: blur(10px);
+}
+
+.bookstore-hero .text-white-50,
+.bookstore-hero .text-muted {
+    color: rgba(255, 255, 255, 0.72) !important;
+}
+
+.bookstore-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 8px 14px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.12);
+    color: #fff;
+    font-weight: 700;
+    font-size: 0.8rem;
+    margin-bottom: 12px;
+}
+
+.bookstore-toolbar {
+    background: rgba(255, 255, 255, 0.86);
+    border-radius: 18px;
+    backdrop-filter: blur(10px);
+}
+
+.bookstore-card {
+    background: linear-gradient(180deg, #ffffff 0%, #fbfdff 100%);
+    border-radius: 20px;
+    padding: 18px;
+    transition: transform 0.28s ease, box-shadow 0.28s ease;
+    overflow: hidden;
+    height: 100%;
+}
+
+.bookstore-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 22px 36px rgba(15, 23, 42, 0.12);
+}
+
+.bookstore-book-img {
+    height: 250px;
+    object-fit: contain;
+    width: 100%;
+    border-radius: 14px;
+    background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+    padding: 10px;
+}
+
+.bookstore-book-title {
+    font-weight: 700;
+    font-size: 15px;
+    color: var(--bookstore-ink);
+    min-height: 44px;
+    overflow: hidden;
+    margin-top: 14px;
+    line-height: 1.35;
+}
+
+.bookstore-price {
+    color: var(--bookstore-primary);
+    font-weight: 700;
+    font-size: 1.05rem;
+    margin: 10px 0 4px;
+}
+
+.bookstore-btn-add {
+    background: linear-gradient(135deg, var(--bookstore-primary) 0%, var(--bookstore-primary-2) 100%);
+    color: white;
+    border-radius: 999px;
+    font-size: 13px;
+    font-weight: 600;
+    border: none;
+    padding: 9px 20px;
+    width: 100%;
+    transition: 0.25s ease;
+}
+
+.bookstore-btn-add:hover {
+    color: white;
+    transform: translateY(-1px);
+    box-shadow: 0 14px 24px rgba(231, 111, 81, 0.24);
+}
+
+.bookstore-empty-state {
+    background: rgba(255, 255, 255, 0.84);
+    border-radius: 22px;
+    border-style: dashed;
+    border-color: rgba(100, 116, 139, 0.25);
+    padding: 32px 16px;
+}
+
+.bookstore-history-card {
+    background: rgba(255, 255, 255, 0.92);
+    border-radius: 22px;
+}
+
+.bookstore-page-title {
+    background: linear-gradient(135deg, #264653 0%, #1f2937 100%);
+    color: #fff;
+    border-radius: 18px;
+    padding: 18px 20px;
+    box-shadow: 0 20px 40px rgba(15, 23, 42, 0.18);
+}
+
+.bookstore-status-badge {
+    padding: 6px 12px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.bookstore-result-card {
+    border-radius: 18px;
+    overflow: hidden;
+}
+
+.bookstore-book-title--chatbot {
+    font-size: 1.05rem;
+    font-weight: 700;
+    min-height: 52px;
+    color: var(--bookstore-ink);
+    line-height: 1.35;
+}
+
+.bookstore-book-stock {
+    color: #6c757d;
+    font-size: 0.95rem;
+}
+
+@media (min-width: 992px) {
+    .bookstore-hero {
+        padding: 24px 28px;
+    }
+
+    .bookstore-toolbar {
+        padding: 18px 24px;
+    }
+
+    .bookstore-book-title {
+        font-size: 16px;
+        min-height: 48px;
+    }
+
+    .bookstore-book-title--chatbot {
+        min-height: 56px;
+    }
+
+    .bookstore-page-title {
+        padding: 22px 26px;
+    }
+
+    .bookstore-history-card {
+        padding: 28px;
+    }
+}
