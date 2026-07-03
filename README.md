@@ -288,7 +288,7 @@ This project is open source under the **MIT License** - see [LICENSE](LICENSE) f
 LeTrongNghia
 
 - GitHub: [@NghiaFSD](https://github.com/NghiaFSD)
-- LinkedIn: [www.linkedin.com/in/nghiafsd)
+- LinkedIn: www.linkedin.com/in/nghiafsd
 - Email: lenghia211105@gmail.com
 
 ## Acknowledgments
